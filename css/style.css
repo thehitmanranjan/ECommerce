@@ -1,0 +1,29 @@
+#background{
+    background:url('../image/bg1.jpg') no-repeat center center;
+    height: 100%;
+    background-size:cover;
+}
+.inner_background{
+    background-color:rgba(0,0,0,0.7);
+    position: absolute;
+    top:40%;
+    left:0.1%;
+}
+.btn-danger{
+    position:relative;
+    left:40%;
+    top:20%;
+}
+a{
+    color:black;
+}
+a:hover{
+    color:black;
+    text-decoration: none;
+}
+footer{
+    background-color: #000;
+ color:#fff;
+ font-size:14px;
+ padding:1%
+ }
