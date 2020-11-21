@@ -1,0 +1,60 @@
+.container-fluid {
+    padding: 0;
+}
+.container {
+    padding: 0;
+}
+.jumbotron{
+    .welcomemessage{
+        display: inline;
+    }
+}
+.banner {
+    background: url('../image/bg1.jpg') no-repeat center center;
+    height: 100%;
+    background-size: cover;
+    &__text {
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: 40%;
+        left: 0.1%;
+        &__heading {
+            margin-top: 20px;
+        }
+        &__heading, &__description {
+            color:white;
+            text-align: center;
+        }
+        &__button{
+            margin:0;
+        }
+    }
+}
+.food__caption {
+    text-align: center;
+}
+.errormessage {
+    color:red;
+}
+.btn-danger {
+    position: relative;
+    left: 40%;
+    top: 20%;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    font-size: 14px;
+    padding: 1%;
+    text-align: center;
+}

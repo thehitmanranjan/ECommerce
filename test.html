@@ -1,0 +1,379 @@
+<?php
+include('common.php');
+?>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <!--jQuery library-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--Latest compiled and minified JavaScript-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Products</title>
+</head>
+
+<body>
+    <?php
+    include('header.php');
+    include('check-if-added.php');
+    ?>
+    <div class="container mt-4" style="padding:0;">
+        <div class="jumbotron">
+            <h1>Welcome to Whole Foods Market</h1>
+            <p>We have the best cuisines availabe for you!!</p>
+        </div>
+    </div>
+    <div class="container" style="padding:0;">
+        <div class="row">
+            <div class="col-12 col-md-3 mt-2">
+                <div class="img-thumbnail">
+                    <img src="image/cholabhatura.jpg" alt="" style="width:100%">
+                    <div class="caption">
+                        <h3 align="center">Chola Bhatura</h3>
+                        <p align="center">Price &#8377;150/Person</p>
+                        <?php
+                        if (!isset($_SESSION['id'])) {
+                        ?>
+                            <a class="btn btn-primary btn-block" href="login.php">Add Ingredients to cart</a>
+                            <?php
+                        } else {
+                            $ret = check(1);
+                            if ($ret == 1) {
+                            ?>
+                                <button class="btn btn-primary btn-block" disabled>Added Ingredients to cart</button>
+                            <?php
+                            } else {
+                            ?>
+                                <a class="btn btn-primary btn-block" href="addtocart.php?id=1">Add Ingredients to cart</a>
+                        <?php
+                            }
+                        }
+                        ?>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-3 mt-2">
+                <div class="img-thumbnail">
+                    <img src="image/masaladosa.jpg" alt="" style="width:100%">
+                    <div class="caption">
+                        <h3 align="center">Masala Dosa</h3>
+                        <p align="center">Price &#8377;200/Person</p>
+                        <?php
+                        if (!isset($_SESSION['id'])) {
+                        ?>
+                            <a class="btn btn-primary btn-block" href="login.php">Add Ingredients to cart</a>
+                            <?php
+                        } else {
+                            $ret = check(2);
+                            if ($ret == 1) {
+                            ?>
+                                <button class="btn btn-primary btn-block" disabled>Added Ingredients to cart</button>
+                            <?php
+                            } else {
+                            ?>
+                                <a class="btn btn-primary btn-block" href="addtocart.php?id=2">Add Ingredients to cart</a>
+                        <?php
+                            }
+                        }
+                        ?>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-12 mt-2">
+                <div class="img-thumbnail">
+                    <img src="image/pavbhaji.jpg" alt="" style="width:100%">
+                    <div class="caption">
+                        <h3 align="center">Pav Bhaji</h3>
+                        <p align="center">Price &#8377;80.00</p>
+                        <?php
+                        if (!isset($_SESSION['id'])) {
+                        ?>
+                            <a class="btn btn-primary btn-block" href="login.php">Add Ingredients to cart</a>
+                            <?php
+                        } else {
+                            $ret = check(3);
+                            if ($ret == 1) {
+                            ?>
+                                <button class="btn btn-primary btn-block" disabled>Added Ingredients to cart</button>
+                            <?php
+                            } else {
+                            ?>
+                                <a class="btn btn-primary btn-block" href="addtocart.php?id=3">Add Ingredients to cart</a>
+                        <?php
+                            }
+                        }
+                        ?>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-12 mt-2">
+                <div class="img-thumbnail">
+                    <img src="image/idli.jpg" alt="" style="width:100%">
+                    <div class="caption">
+                        <h3 align="center">Idli</h3>
+                        <p align="center">Price &#8377;60/Person</p>
+                        <?php
+                        if (!isset($_SESSION['id'])) {
+                        ?>
+                            <a class="btn btn-primary btn-block" href="login.php">Add Ingredients to cart</a>
+                            <?php
+                        } else {
+                            $ret = check(4);
+                            if ($ret == 1) {
+                            ?>
+                                <button class="btn btn-primary btn-block" disabled>Added Ingredients to cart</button>
+                            <?php
+                            } else {
+                            ?>
+                                <a class="btn btn-primary btn-block" href="addtocart.php?id=4">Add Ingredients to cart</a>
+                        <?php
+                            }
+                        }
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-12 col-md-3 mt-2">
+                <div class="img-thumbnail">
+                    <img src="image/pizza.jpg" alt="" style="width:100%">
+                    <div class="caption">
+                        <h3 align="center">Pizza</h3>
+                        <p align="center">Price &#8377;250/Person</p>
+                        <?php
+                        if (!isset($_SESSION['id'])) {
+                        ?>
+                            <a class="btn btn-primary btn-block" href="login.php">Add Ingredients to cart</a>
+                            <?php
+                        } else {
+                            $ret = check(5);
+                            if ($ret == 1) {
+                            ?>
+                                <button class="btn btn-primary btn-block" disabled>Added Ingredients to cart</button>
+                            <?php
+                            } else {
+                            ?>
+                                <a class="btn btn-primary btn-block" href="addtocart.php?id=5">Add Ingredients to cart</a>
+                        <?php
+                            }
+                        }
+                        ?>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-12 mt-2">
+                <div class="img-thumbnail">
+                    <img src="image/pasta.jpg" alt="" style="width:100%">
+                    <div class="caption">
+                        <h3 align="center">Pasta</h3>
+                        <p align="center">Price &#8377;150/Person</p>
+                        <?php
+                        if (!isset($_SESSION['id'])) {
+                        ?>
+                            <a class="btn btn-primary btn-block" href="login.php">Add Ingredients to cart</a>
+                            <?php
+                        } else {
+                            $ret = check(6);
+                            if ($ret == 1) {
+                            ?>
+                                <button class="btn btn-primary btn-block" disabled>Added Ingredients to cart</button>
+                            <?php
+                            } else {
+                            ?>
+                                <a class="btn btn-primary btn-block" href="addtocart.php?id=6">Add Ingredients to cart</a>
+                        <?php
+                            }
+                        }
+                        ?>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-12 mt-2">
+                <div class="img-thumbnail">
+                    <img src="image/lasagna.jpg" alt="" style="width:100%">
+                    <div class="caption">
+                        <h3 align="center">Lasagna</h3>
+                        <p align="center">Price &#8377;200/Person</p>
+                        <?php
+                        if (!isset($_SESSION['id'])) {
+                        ?>
+                            <a class="btn btn-primary btn-block" href="login.php">Add Ingredients to cart</a>
+                            <?php
+                        } else {
+                            $ret = check(7);
+                            if ($ret == 1) {
+                            ?>
+                                <button class="btn btn-primary btn-block" disabled>Added Ingredients to cart</button>
+                            <?php
+                            } else {
+                            ?>
+                                <a class="btn btn-primary btn-block" href="addtocart.php?id=7">Add Ingredients to cart</a>
+                        <?php
+                            }
+                        }
+                        ?>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-12 mt-2">
+                <div class="img-thumbnail">
+                    <img src="image/pistachio-panna-cotta.jpg" alt="" style="width:100%">
+                    <div class="caption">
+                        <h3 align="center">Panna Cotta</h3>
+                        <p align="center">Price &#8377;150/Person</p>
+                        <?php
+                        if (!isset($_SESSION['id'])) {
+                        ?>
+                            <a class="btn btn-primary btn-block" href="login.php">Add Ingredients to cart</a>
+                            <?php
+                        } else {
+                            $ret = check(8);
+                            if ($ret == 1) {
+                            ?>
+                                <button class="btn btn-primary btn-block" disabled>Added Ingredients to cart</button>
+                            <?php
+                            } else {
+                            ?>
+                                <a class="btn btn-primary btn-block" href="addtocart.php?id=8">Add Ingredients to cart</a>
+                        <?php
+                            }
+                        }
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-12 col-md-3 mt-2">
+                <div class="img-thumbnail">
+                    <img src="image/momos.jpg" alt="" style="width:100%">
+                    <div class="caption">
+                        <h3 align="center">Momos</h3>
+                        <p align="center">Price &#8377;80/Person</p>
+                        <?php
+                        if (!isset($_SESSION['id'])) {
+                        ?>
+                            <a class="btn btn-primary btn-block" href="login.php">Add Ingredients to cart</a>
+                            <?php
+                        } else {
+                            $ret = check(9);
+                            if ($ret == 1) {
+                            ?>
+                                <button class="btn btn-primary btn-block" disabled>Added Ingredients to cart</button>
+                            <?php
+                            } else {
+                            ?>
+                                <a class="btn btn-primary btn-block" href="addtocart.php?id=9">Add Ingredients to cart</a>
+                        <?php
+                            }
+                        }
+                        ?>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-3 mt-2">
+                <div class="img-thumbnail">
+                    <img src="image/noodles.jpg" alt="" style="width:100%">
+                    <div class="caption">
+                        <h3 align="center">Noodles</h3>
+                        <p align="center">Price &#8377;100/Person</p>
+                        <?php
+                        if (!isset($_SESSION['id'])) {
+                        ?>
+                            <a class="btn btn-primary btn-block" href="login.php">Add Ingredients to cart</a>
+                            <?php
+                        } else {
+                            $ret = check(10);
+                            if ($ret == 1) {
+                            ?>
+                                <button class="btn btn-primary btn-block" disabled>Added Ingredients to cart</button>
+                            <?php
+                            } else {
+                            ?>
+                                <a class="btn btn-primary btn-block" href="addtocart.php?id=10">Add Ingredients to cart</a>
+                        <?php
+                            }
+                        }
+                        ?>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-3 mt-2">
+                <div class="img-thumbnail">
+                    <img src="image/springrolls.jpg" alt="" style="width:100%">
+                    <div class="caption">
+                        <h3 align="center">Spring Rolls </h3>
+                        <p align="center">Price &#8377;200/Person</p>
+                        <?php
+                        if (!isset($_SESSION['id'])) {
+                        ?>
+                            <a class="btn btn-primary btn-block" href="login.php">Add Ingredients to cart</a>
+                            <?php
+                        } else {
+                            $ret = check(11);
+                            if ($ret == 1) {
+                            ?>
+                                <button class="btn btn-primary btn-block" disabled>Added Ingredients to cart</button>
+                            <?php
+                            } else {
+                            ?>
+                                <a class="btn btn-primary btn-block" href="addtocart.php?id=11">Add Ingredients to cart</a>
+                        <?php
+                            }
+                        }
+                        ?>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 mt-2">
+                <div class="img-thumbnail">
+                    <img src="image/honey-chilli-potato.jpg" alt="" style="width:100%">
+                    <div class="caption">
+                        <h3 align="center">Chilli Potato</h3>
+                        <p align="center">Price &#8377;100/Person</p>
+                        <?php
+                        if (!isset($_SESSION['id'])) {
+                        ?>
+                            <a class="btn btn-primary btn-block" href="login.php">Add Ingredients to cart</a>
+                            <?php
+                        } else {
+                            $ret = check(12);
+                            if ($ret == 1) {
+                            ?>
+                                <button class="btn btn-primary btn-block" disabled>Added Ingredients to cart</button>
+                            <?php
+                            } else {
+                            ?>
+                                <a class="btn btn-primary btn-block" href="addtocart.php?id=12">Add Ingredients to cart</a>
+                        <?php
+                            }
+                        }
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="padding:0;">
+        <div class="row mt-5 pt-5">
+            <div class="col-12">
+                <footer>
+                    <p align="center" class="foot">Copyright &copy; Whole Foods Market. All Rights
+                        Reserved | Contact Us: +91 96933 71403</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
